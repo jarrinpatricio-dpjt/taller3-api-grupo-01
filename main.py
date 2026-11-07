@@ -78,7 +78,7 @@ def consultar_solicitud(solicitud_id: int, usuario=Depends(obtener_usuario_actua
     # Si la solicitud no existe o pertenece a otra persona se responde 404,
     # para no revelar información de otros usuarios.
     if solicitud is None or solicitud["propietario"] != usuario["usuario"]:
-        raise HTTPException(status_code=400, detail="Solicitud no encontrada")
+        raise HTTPException(status_code=404, detail="Solicitud no encontrada")
     return solicitud
 
 
