@@ -1,0 +1,44 @@
+[
+  {
+    "caso": "Sin token",
+    "codigo": 401,
+    "respuesta": {
+      "detail": "Not authenticated"
+    }
+  },
+  {
+    "caso": "Con token",
+    "codigo": 200,
+    "respuesta": [
+      {
+        "id": 1,
+        "tipo": "Consulta de gastroenterología",
+        "estado": "Atendido",
+        "fecha": "2026-10-02"
+      },
+      {
+        "id": 2,
+        "tipo": "Consulta de gastroenterología",
+        "estado": "En revisión",
+        "fecha": "2026-10-15"
+      }
+    ]
+  },
+  {
+    "caso": "Inexistente",
+    "codigo": 404,
+    "respuesta": {
+      "detail": "Solicitud no encontrada"
+    }
+  },
+  {
+    "caso": "Registro",
+    "codigo": 201,
+    "respuesta": {
+      "id": 4,
+      "tipo": "Consulta de gastroenterología",
+      "estado": "Recibido",
+      "fecha": "2026-11-07"
+    }
+  }
+]
